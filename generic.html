@@ -37,7 +37,7 @@
 
 									<span class="image main"><img src="images/cycle.png" alt="" /></span>
 
-									<p>In this project we attempt to forecast the probability of an economic recession using a Vector Autoregression Model (VAR). We use leading economic indicators such as treasury spread, initial unemployment claims, and the state coincident index to forecast the NBER Recession Indicator. The model is tested by its ability to predict the 2008 economic recession. To view the full R code, please follow the link below: <li><a href="https://github.com/whalendevin/Portfolio-Projects/blob/main/monthly%20recession%20indicators.R" class="button"><strong>R Code</strong></a></li></p>
+									<p>In this project we attempt to forecast the probability of an economic recession using a Vector Autoregression Model (VAR). We use leading economic indicators such as treasury spread, initial unemployment claims, and the State Coincidence Index to forecast the NBER Recession Indicator. The model is tested by its ability to predict the 2008 economic recession. To view the full R code, please follow the link below: <li><a href="https://github.com/whalendevin/Portfolio-Projects/blob/main/monthly%20recession%20indicators.R" class="button"><strong>R Code</strong></a></li></p>
 
 									<hr class="major" />
 
@@ -61,10 +61,16 @@
 									<hr class="major" />
 
 									<h2>Vector Auto Regression and Forecast</h2>
+									<p></p>
 									<p>First we select for the correct lag order by choosing the lowest AIC. We then estimate the coefficients and make the forecast. </p>
-									<span class="image small"><img src="images/VAR model.png" alt="" /><span class="image small"><img src="images/aic.png" alt="" /> <p>The lowest aic number is the 10th lag order. Therefore, we estimate our VAR model with lag order 10.</p>
-									<span class="image small"><img src="images/forecast results.png" alt="" /><p>Looking at the forecast results, we see that the highest probability of recession withing the next year is 25.5% in month 9. This barely meets the criteria of a "moderate chance" of recession. With below 25% being "low chance", 25% to 50% being "moderate chance", and above 50% being "high chance".</p>
+									<span class="image small"><img src="images/VAR model.png" alt="" /><span class="image small"><img src="images/aic.png" alt="" />
+									<p></p>
+									<p>The lowest aic number is the 10th lag order. Therefore, we estimate our VAR model with lag order 10.</p>
+									<span class="image small"><img src="images/forecast results.png" alt="" />
+									<p></p>
+									<p>Looking at the forecast results, we see that the highest probability of recession withing the next year is 25.5% in month 9. This barely meets the criteria of a "moderate chance" of recession. With below 25% being "low chance", 25% to 50% being "moderate chance", and above 50% being "high chance".</p>
 									<span class="image small"><img src="images/Forecast Graph.png" alt="" />
+									<p></p>
 									<p>Thus, we conclude that within the next year there is a 25.5% probability of recession. This is a moderate chance of recession.</p>
 
 									<hr class="major" />
@@ -73,6 +79,7 @@
 									<p>We test the model by observing its ability to predict the 2008 recession. We do this by only giving it data through 2007. </p>
 									<span class="image small"><img src="images/test forecast.png" alt="" /> <p>The forecast for 2008 reaches up to 76% probability of recession which is classified as a "high chance".</p>
 									<span class="image small"><img src="images/2008 Recession Forecast.png" alt="" /> 
+									<p></p>
 									<p>We conclude that this model does indeed accurately forecast the probability of recession. It claims that there is a high chance of recession for 6 months in 2008.</p>
 
 								</section>
