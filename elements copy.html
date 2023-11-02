@@ -36,7 +36,7 @@
 									</header>
 									<span class="image main"><img src="images/Pay Equity Header.jpg" style='height: 100%; width: 100%; object-fit: contain'src="images/Pay Equity Header.jpg" alt="" /></span>
 									<!-- Content -->
-									<p>In this project we analyze employment data to find any pay inequalities due to inappropriate variables such as ethinicity or gender. The main statistal tool we use for this analysis is a log-linear regression model. To view the full R code, please follow the link below: <li><a href="https://github.com/whalendevin/Portfolio-Projects/blob/main/monthly%20recession%20indicators.R" class="button"><strong>Full R Code</strong></a></li></p>
+									<p>In this project we analyze employment data to find any pay inequalities due to inappropriate variables such as ethnicity or gender. The main statistical tool we use for this analysis is a log-linear regression model. To view the full R code, please follow the link below: <li><a href="https://github.com/whalendevin/Portfolio-Projects/blob/main/monthly%20recession%20indicators.R" class="button"><strong>Full R Code</strong></a></li></p>
 									<div class="content">
 									<div class="col-6 col-12-small">
 									<h2>The Data</h2>
@@ -59,13 +59,13 @@
 									  <p>The source of all data is from the practice problems given by Jeffery M. Wooldridge's Econometrics Textbooks. </p>
 									  <hr class="major" />
 									  <h2>Modeling and Regression</h2>
-									  <p>Using scatter plots we can see if some of our variables need to be higher order polynomials for a better fit to the model. Tenure and experience seem to be variables that should be quadradics instead of straight lines. Below are the comparisons. Later when we estimate the regression model we will see if the R-squared gives us a better fit with these quadradics added into the model.</p>
+									  <p>Using scatter plots we can see if some of our variables need to be higher order polynomials for a better fit to the model. Tenure and experience seem to be variables that should be quadratics instead of straight lines. Below are the comparisons. Later when we estimate the regression model we will see if the R-squared gives us a better fit with these quadratics added into the model.</p>
 									  <p>We start by plotting the linear model of log-wage and experience.</p>
 									  <span class="w-25 h-auto"><img src="images/wage experience linear plot" style='height: 100%; width: 100%; object-fit: contain'src="images/wage experience linear plot" alt="" /></span>
 									  <p></p>
 									  <p>Next we plot the nonlinear model of log-wage and experience.</p>
 									  <span class="w-25 h-auto"><img src="images/wage experience nonlinear plot" style='height: 100%; width: 100%; object-fit: contain'src="images/wage experience nonlinear plot" alt="" /></span>
-									  <p>We can see that the variable experience should at least be a quadradic in the model. We repeat this with the variable tenure as well.</p>
+									  <p>We can see that the variable experience should at least be a quadratic in the model. We repeat this with the variable tenure as well.</p>
 									  <span class="w-25 h-auto"><img src="images/wage tenure linear plot " style='height: 100%; width: 100%; object-fit: contain'src="images/wage tenure linear plot" alt="" /></span>
 									  <span class="w-25 h-auto"><img src="images/wage tenure nonlinear plot" style='height: 100%; width: 100%; object-fit: contain'src="images/wage tenure nonlinear plot" alt="" /></span>
 									  <p>Again, we see a nonlinear relationship between wage and tenure but perhaps to a lesser degree than wage and experience.</p>
@@ -74,11 +74,11 @@
 									  <p></p>
 									  <p>First we estimate a model with all relevent variables to observe statistical significance. </p>
 									  <span class="w-25 h-auto"><img src="images/equity regression all variables.png" style='height: 100%; width: 100%; object-fit: contain'src="images/equity regression all variables.png" alt="" /></span>
-									  <p>We can see that none of the regional variables are statistically significant. Other variables such as experience also show up as not statistically significant which does not make sense. Next we estimate the model with experience and tenure as quadradics.</p>
+									  <p>We can see that none of the regional variables are statistically significant. Other variables such as experience also show up as not statistically significant which does not make sense. Next we estimate the model with experience and tenure as quadratics.</p>
 									  <span class="w-25 h-auto"><img src="images/equity regression quadradics.png" style='height: 100%; width: 100%; object-fit: contain'src="images/equity regression quadradics.png" alt="" /></span>
-									  <p>After modeling the quadradics, experience is now statistically significant at the 99% confidence level. The higher order tenure however is only significant at the 90% confidence level. This makes sense considering the earlier scatter plots. Therefore, we will use the adjusted R-squared to see which order of tenure is a better fit for the model.</p>
+									  <p>After modeling the quadratics, experience is now statistically significant at the 99% confidence level. The higher order tenure however is only significant at the 90% confidence level. This makes sense considering the earlier scatter plots. Therefore, we will use the adjusted R-squared to see which order of tenure is a better fit for the model.</p>
 									  <span class="w-25 h-auto"><img src="images/equity regression onequad.png" style='height: 100%; width: 100%; object-fit: contain'src="images/equity regression onequad.png" alt="" /></span>
-									  <p>The Adjusted R-squares are almost identical to each other with only a difference of 0.0018. This tells us that making tenure a quadradic does not do much for the model. Therefore, we will keep it in the model as a linear variable.</p>
+									  <p>The Adjusted R-squares are almost identical to each other with only a difference of 0.0018. This tells us that making tenure a quadratic does not do much for the model. Therefore, we will keep it in the model as a linear variable.</p>
 									  <hr class="major" />
 									  <h2>Interpretation and Conclusions</h2>
 									  <p>Recall that the purpose of this analysis was to find innapropriate causes for unequitable pay. The two variables that would be innapropriate causes for unequitable pay in this model are gender and race. Let us first consider the variable gender, labeled as female in the model, which is a binary (or dummy) variable which is equal to 1 if female. 
